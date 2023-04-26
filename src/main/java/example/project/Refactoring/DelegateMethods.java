@@ -15,6 +15,7 @@ public class DelegateMethods {
         return min + (int) (Math.random() * (max - min));
     }
 
+
     /**
      * We want to hide the possibility of controlling the minimum value.
      * So, we create a public method that delegates the call to `createRandomValue()` method with only the max param.
@@ -26,6 +27,7 @@ public class DelegateMethods {
      */
     public static int createRandomInteger(int max) {
         // TODO: delegate the call to `createRandomValue()` method.
-        return -1;
+        return createRandomValue(0,max);
+
     }
 }
