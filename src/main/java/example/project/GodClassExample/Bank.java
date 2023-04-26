@@ -61,10 +61,6 @@ public class Bank {
         customers.add(customer);
     }
 
-    // TODO: move this method to BankAccount class
-    public double obtainBalance(BankAccount account) {
-        return account.getBalance();
-    }
 
     // This method should not be moved to BankAccount class. Why not? Please think about it.
     public void closeAccount(BankAccount account) {
@@ -72,12 +68,6 @@ public class Bank {
         accounts.remove(account);
     }
 
-    // TODO: move this method to BankAccount class
-    public void addInterest(BankAccount account) {
-        double interest = account.getInterest();
-        double value = account.getBalance() * interest;
-        account.setBalance(account.getBalance() + value);
-    }
 
     // This method should not be moved to Branch class. Why not? Please think about it.
     public void closeBranch(Branch branch) {
@@ -87,7 +77,7 @@ public class Bank {
 
     // TODO: remove navigation code
     public void changePayrollProcessingDate(String date, String staffCategory) {
-        payroll.getStaffCategoryPaySchedule(staffCategory).payDay = date; // TODO: remove this navigation code
+        payroll.changeDate(staffCategory,date); // TODO: remove this navigation code
     }
 
 }

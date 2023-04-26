@@ -13,4 +13,7 @@ public class PaySchedule {
     public String getPayDay() {
         return payDay;
     }
+    public void setDate(String date){
+        payDay=date.toString();
+    }
 }

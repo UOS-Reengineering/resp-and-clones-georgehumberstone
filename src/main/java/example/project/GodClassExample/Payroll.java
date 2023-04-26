@@ -1,9 +1,6 @@
 package example.project.GodClassExample;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class Payroll {
 
@@ -15,6 +12,10 @@ public class Payroll {
 
     public PaySchedule getStaffCategoryPaySchedule(String staffCategory) {
         return staffCategoryPaySchedule.get(staffCategory);
+    }
+    public void changeDate(String staffcat, String date){
+        PaySchedule ps =getStaffCategoryPaySchedule(staffcat);
+        ps.setDate(date);
     }
 
 }
